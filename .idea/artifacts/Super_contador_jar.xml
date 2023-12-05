@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Super_contador:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Super_contador_jar</output-path>
+    <root id="archive" name="Super_contador.jar">
+      <element id="module-output" name="Super_contador" />
+    </root>
+  </artifact>
+</component>
