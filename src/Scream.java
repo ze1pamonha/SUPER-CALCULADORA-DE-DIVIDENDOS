@@ -92,9 +92,9 @@ calculo2.setText("calculo 2 ");
 
         JOptionPane.showMessageDialog(null,
                 "                                                                                         ESSE BUTAO FARA:\n" +
-                        "                        explemplo: se uma açao custa 8,00 e ela retorna 0,06 centavos com 900 açoes ela daria 54,00 rais por mes\n" +
-                        "                        entao vai calcular o preço da açao e o retorno vai pegar um tanto de açao 900 voltaria um tanto\n" +
-                        "                        vai calcular se voce tiver um tanto de açao qunto ela ira dar de retorno e quanto voce precisa apar comprar essas açao","calculo1",JOptionPane.WARNING_MESSAGE);
+                        "                        exemplo: se uma ação custa 8,00 e ela retorna 0,06 centavos com 900 açoes ela daria 54,00 rais por mes\n" +
+                        "                        então vai calcular o preço da ação e o retorno vai pegar um tanto de ação 900 voltaria um tanto\n" +
+                        "                        vai calcular se voce tiver um tanto de ação quanto ela ira dar de retorno e quanto voce precisa apar comprar essas ação","calculo1",JOptionPane.WARNING_MESSAGE);
 
         calculo=new JFrame();
 calculo.setLocale(Locale.of("brasilian"));
@@ -217,7 +217,7 @@ var sominha =conteudo2*conteudo1;
     }
 
     private void teste(ActionEvent actionEvent) {
-      JOptionPane recado=new JOptionPane("futuro");
+
         JOptionPane.showMessageDialog(null,
                 " suponhamos que voce teria uma certa quantia e queira comprar tudo e uma so açao isso mostraria quantas açao teria com esse valor","opçao 2",JOptionPane.WARNING_MESSAGE);
 
@@ -294,7 +294,7 @@ var sominha =conteudo2*conteudo1;
     }
 
     private void calculo3(ActionEvent actionEvent) {
-        JOptionPane recado=new JOptionPane("futuro");
+
         JOptionPane.showMessageDialog(null,
                 " isso ainda sera adicionado no futuro","futuro",JOptionPane.WARNING_MESSAGE);
     }
