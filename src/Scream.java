@@ -245,12 +245,11 @@ var sominha =conteudo2*conteudo1;
         num2.setBounds(480,150,200,50);
         num2.setText("2");
 
-        caixaDeNumero1=new JLabel("qual o preço do fundo imobiliario?");
+        caixaDeNumero1=new JLabel("qual o preço das açoes");
         caixaDeNumero1.setBounds(480 ,-20 ,400 ,300);
         caixaDeNumero1.setFont(new Font("Arial",Font.PLAIN,14));
 
-        caixaDeNumero2=new JLabel("quantos fundos imobiliarios?");
-
+        caixaDeNumero2=new JLabel("quanto voce possui?");
         caixaDeNumero2.setBounds(180 ,-20 ,400 ,300);
         caixaDeNumero2.setFont(new Font("Arial",Font.PLAIN,14));
 
