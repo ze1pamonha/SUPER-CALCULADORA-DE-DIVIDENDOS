@@ -78,6 +78,7 @@ calculo2.setText("calculo 2 ");
        texto4= new JTextPane();
        texto4.setText("teste");
        texto4.setEditable(false);
+
         setVisible(true);
     }
 
@@ -97,7 +98,21 @@ calculo2.setText("calculo 2 ");
                         "                        vai calcular se voce tiver um tanto de ação quanto ela ira dar de retorno e quanto voce precisa apar comprar essas ação","calculo1",JOptionPane.WARNING_MESSAGE);
 
         calculo=new JFrame();
-calculo.setLocale(Locale.of("brasilian"));
+        calculo.setLocale(Locale.of("brasilian"));
+        calculo.setBounds(200,200,200,200);
+        calculo.setVisible(true);
+
+        calculo.setTitle("indo ali");
+
+        calculo.setSize(900,600);
+
+        calculo.setLocationRelativeTo(null);
+        calculo.setLayout(null);
+        calculo.setResizable(false);
+        calculo.setLocale(null);
+
+        calculo=new JFrame();
+        calculo.setLocale(Locale.of("brasilian"));
         calculo.setBounds(200,200,200,200);
         calculo.setVisible(true);
 
@@ -127,7 +142,7 @@ calculo.setLocale(Locale.of("brasilian"));
 
 
 
-         caixaDeNumero1=new JLabel("qual o preço do fundo imobiliario?");
+        caixaDeNumero1=new JLabel("qual o preço do fundo imobiliario?");
         caixaDeNumero1.setBounds(100 ,-80 ,400 ,300);
         caixaDeNumero1.setFont(new Font("Arial",Font.PLAIN,14));
 
@@ -142,19 +157,19 @@ calculo.setLocale(Locale.of("brasilian"));
 
 
         texto1=new JLabel("o resultado e ?");
-      texto1.setBounds(50 ,300 ,8300 ,300);
+        texto1.setBounds(50 ,300 ,8300 ,300);
         texto1.setFont(new Font("Arial",Font.PLAIN,26));
-calculo.add(texto1);
+        calculo.add(texto1);
 
-texto2=new JLabel("zum");
-      texto2.setBounds(50 ,350 ,8300 ,300);
+        texto2=new JLabel("zum");
+        texto2.setBounds(50 ,350 ,8300 ,300);
         texto2.setFont(new Font("Arial",Font.PLAIN,26));
 
 
         texto3=new JTextPane();
         texto3.setBounds(50 ,480 ,500 ,100);
         texto3.setFont(new Font("Arial",Font.PLAIN,26));
-
+        texto3.setEditable(false);
 
 
         JButton resultado=new JButton("resultado");
@@ -176,13 +191,14 @@ texto2=new JLabel("zum");
 
 
 
+
     }
 
     private void resultado(ActionEvent actionEvent) {
 
 
 
-      int conteudo1=Integer.parseInt(num1.getText());
+      Double conteudo1=Double.parseDouble(num1.getText());
 
 double conteudo3=Double.parseDouble(num3.getText().replace(",","."));
 double conteudo2=Double.parseDouble(num2.getText().replace(",","."));
@@ -193,7 +209,7 @@ var sominha =conteudo2*conteudo1;
 
         texto4.setBounds(50 ,370 ,700 ,100);
         texto4.setFont(new Font("Arial",Font.PLAIN,26));
-
+texto4.setEditable(false);
 
 //texto2.setText(" tudo\n deu "+tudo+ " reais por mes\n");
 
@@ -204,7 +220,7 @@ var sominha =conteudo2*conteudo1;
 
 
 
-        texto3.setText("voce iria precisar "+new DecimalFormat(".0").format(sominha)+" reais");
+        texto3.setText("voce iria precisar "+new DecimalFormat("#,##0.00").format(sominha)+" reais");
 
 
         calculo.add(texto4);
@@ -280,12 +296,14 @@ var sominha =conteudo2*conteudo1;
 
         texto4.setBounds(50 ,370 ,600 ,90);
         texto4.setFont(new Font("Arial",Font.PLAIN,26));
-        texto4.setText("Se você tem "+ num1.getText()+ "e deseja comprar ações que custam "+num2.getText()+" cada ");
+        texto4.setText("Se você tem "+ num1.getText()+ " e deseja comprar ações que custam "+num2.getText()+" cada ");
 
         texto3=new JTextPane();
         texto3.setBounds(50 ,480 ,500 ,100);
         texto3.setFont(new Font("Arial",Font.PLAIN,26));
-        texto3.setText("voce teria comprado "+Math.floor(sominha)  +" de fundos imobiliarios");
+        var suma=Math.floor(sominha);
+        texto3.setText("voce teria comprado "+new DecimalFormat("#,##0.00").format(suma) +" de fundos imobiliarios");
+
         texto3.setEditable(false);
 
         calculo.add(texto3);
@@ -295,6 +313,74 @@ var sominha =conteudo2*conteudo1;
     private void calculo3(ActionEvent actionEvent) {
 
         JOptionPane.showMessageDialog(null,
-                " isso ainda sera adicionado no futuro","futuro",JOptionPane.WARNING_MESSAGE);
+                " suponhamos que voce queira ter mil reais de dividendos isso calcularia quantas ação seria preciso para ter esse valor","futuro",JOptionPane.WARNING_MESSAGE);
+
+
+        calculo=new JFrame();
+        calculo.setLocale(Locale.of("brasilian"));
+        calculo.setBounds(200,200,200,200);
+        calculo.setVisible(true);
+
+        calculo.setTitle("indo ali");
+
+        calculo.setSize(900,600);
+
+        calculo.setLocationRelativeTo(null);
+        calculo.setLayout(null);
+        calculo.setResizable(false);
+        calculo.setLocale(null);
+
+        num1=new JTextField();
+        num1.setFont(new Font("Arial",Font.BOLD,40));
+
+        num1.setBounds(100,100,200,50);
+        num1.setText("");
+
+        num2=new JTextField();
+        num2.setFont(new Font("Arial",Font.BOLD,40));
+      num2.setBounds(95 ,200 ,200 ,50);
+
+        num2.setText("");
+
+        caixaDeNumero1=new JLabel("qual e o valor desejado dos dividendos alcançara?");
+        caixaDeNumero1.setBounds(100 ,-80 ,400 ,300);
+        caixaDeNumero1.setFont(new Font("Arial",Font.PLAIN,14));
+
+        caixaDeNumero2=new JLabel("quanto que o fundo dara de retorno?");
+        caixaDeNumero2.setBounds(100 ,30 ,400 ,300);
+        caixaDeNumero2.setFont(new Font("Arial",Font.PLAIN,14));
+
+        JButton resultado=new JButton("resultado");
+
+        resultado.setBounds(400,150,250,70);
+        resultado.setFont(new Font("Arial",Font.BOLD,30));
+        resultado.setForeground(new Color(234, 10, 10));
+        resultado.setBackground(new Color(0, 0, 0));
+
+        calculo.add(num1);
+        calculo.add(num2);
+        calculo.add(caixaDeNumero1);
+        calculo.add(caixaDeNumero2);
+        calculo.add(resultado);
+        resultado.addActionListener(this::resultado3);
+
+    }
+
+    private void resultado3(ActionEvent actionEvent) {
+        double conteudo1=Double.parseDouble(num1.getText().replace(",","."));
+        double conteudo2=Double.parseDouble(num2.getText().replace(",","."));
+        var sominha =conteudo1/conteudo2;
+
+
+        texto3=new JTextPane();
+        texto3.setBounds(50 ,380 ,600 ,100);
+        texto3.setFont(new Font("Arial",Font.PLAIN,26));
+
+        texto3.setText(" voce precisaria no total de "+Math.floor(sominha) +" fundos para ter o valor de dividendos por mes de "+num1.getText() );
+
+        texto3.setEditable(false);
+
+        calculo.add(texto3);
+
     }
 }
