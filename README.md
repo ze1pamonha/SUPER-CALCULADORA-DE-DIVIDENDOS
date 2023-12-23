@@ -53,3 +53,4 @@ javac Principal.java
 java Principal
 ```
 e o codigo sera executado
+![Capturar](https://github.com/ze1pamonha/SUPER-CALCULADORA-DE-DIVIDENDOS/assets/117956264/8aca9359-de26-4b46-ba98-fcbb7cde4b7d)
