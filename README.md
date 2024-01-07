@@ -54,3 +54,12 @@ java Principal
 ```
 e o codigo sera executado
 ![Capturar](https://github.com/ze1pamonha/SUPER-CALCULADORA-DE-DIVIDENDOS/assets/117956264/8aca9359-de26-4b46-ba98-fcbb7cde4b7d)
+
+## como executar metodo 2
+
+va para a pasta e clique duas vezes no arquivo .jar
+
+![aquino jar](https://github.com/ze1pamonha/SUPER-CALCULADORA-DE-DIVIDENDOS/assets/117956264/73bf58ca-04a6-4745-af19-721772804b9b)
+
+pronto sera executado o programa
+
