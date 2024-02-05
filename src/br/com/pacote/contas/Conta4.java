@@ -46,13 +46,13 @@ public class Conta4 extends JFrame implements ActionListener {
         num2=new JTextField();
         num2.setFont(new Font("Arial",Font.BOLD,40));
         num2.setBounds(100,100,200,50);
-        num2.setText("1,29");
+        num2.setText("");
 
 
 
 
 
-        caixaDeNumero1=new JLabel("Dividendo Mensal (R$)");
+        caixaDeNumero1=new JLabel("Dividendo Anual (R$)");
         caixaDeNumero1.setBounds(100 ,-80 ,400 ,300);
         caixaDeNumero1.setFont(new Font("Arial",Font.PLAIN,14));
 
@@ -95,8 +95,9 @@ public class Conta4 extends JFrame implements ActionListener {
 
 
 
-
-        num1.setText("7,42");
+        texto4.setBounds(50 ,370 ,700 ,100);
+        texto4.setFont(new Font("Arial",Font.PLAIN,26));
+        num1.setText("0,06");
     }
 
     private void resultado(ActionEvent actionEvent) {
@@ -104,17 +105,12 @@ public class Conta4 extends JFrame implements ActionListener {
         double conteudo1=Double.parseDouble(num1.getText().replace(",","."));
         double conteudo2=Double.parseDouble(num2.getText().replace(",","."));
 
-        DecimalFormat formatador =new DecimalFormat(".####");
+        var valorSomado=conteudo2/conteudo1;
 
-String oi=("oi");
-        double valorSomado=conteudo2/conteudo1;
-        var sooo=new  DecimalFormat(".####").format(valorSomado);
-        var suuu=new  DecimalFormat("####").format(sooo);
+        var ff=Math.floor(valorSomado);
 
 
-        texto4.setBounds(50 ,370 ,700 ,100);
-        texto4.setFont(new Font("Arial",Font.PLAIN,26));
-        texto4.setText("eo preço teto deese FII deve ser "+new  DecimalFormat(".####").format(valorSomado)+"dddddd"+suuu);
+        texto4.setText("eo preço teto deese FII deve ser "+new DecimalFormat("##.##").format(valorSomado)+" ou de maneira menas precisa "+new DecimalFormat("##.##").format(ff));
 
         calculo.add(texto4);
         //nao tire o 0 ele e inportante
@@ -125,3 +121,6 @@ String oi=("oi");
 
     }
 }
+
+//dividendo pago nos últimos 12 meses
+//dividido por 0,06

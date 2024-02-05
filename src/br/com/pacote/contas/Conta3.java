@@ -60,6 +60,9 @@ public class Conta3 extends JFrame  implements ActionListener {
         resultado.setFont(new Font("Arial",Font.BOLD,30));
         resultado.setForeground(new Color(234, 10, 10));
         resultado.setBackground(new Color(0, 0, 0));
+        texto3=new JTextPane();
+        texto3.setBounds(50 ,380 ,600 ,100);
+        texto3.setFont(new Font("Arial",Font.PLAIN,26));
 
         calculo.add(num1);
         calculo.add(num2);
@@ -79,9 +82,7 @@ public class Conta3 extends JFrame  implements ActionListener {
         var sominha =conteudo1/conteudo2;
 
 
-        texto3=new JTextPane();
-        texto3.setBounds(50 ,380 ,600 ,100);
-        texto3.setFont(new Font("Arial",Font.PLAIN,26));
+
 
         texto3.setText(" voce precisaria no total de "+Math.floor(sominha) +" fundos para ter o valor de dividendos por mes de "+num1.getText() );
 

@@ -70,9 +70,14 @@ public class Conta2 extends JFrame  implements ActionListener {
         calculo.add(caixaDeNumero2);
         calculo.add(resultado);
         resultado.addActionListener(this::resultado2);
+
+        texto3=new JTextPane();
+        texto3.setBounds(50 ,480 ,500 ,100);
+        texto3.setFont(new Font("Arial",Font.PLAIN,26));
+
         texto4= new JTextPane();
         texto4.setText("teste");
-        texto4.setEditable(false);
+
     }
 
     private void resultado2(ActionEvent actionEvent) {
@@ -85,16 +90,19 @@ public class Conta2 extends JFrame  implements ActionListener {
         texto4.setFont(new Font("Arial",Font.PLAIN,26));
         texto4.setText("Se você tem "+ num1.getText()+ " e deseja comprar ações que custam "+num2.getText()+" cada ");
 
-        texto3=new JTextPane();
-        texto3.setBounds(50 ,480 ,500 ,100);
-        texto3.setFont(new Font("Arial",Font.PLAIN,26));
+
+
         var suma=Math.floor(sominha);
+
+
         texto3.setText("voce teria comprado "+new DecimalFormat("#,##0.00").format(suma) +" de fundos imobiliarios");
 
-        texto3.setEditable(false);
 
-        calculo.add(texto3);
+        texto3.setEditable(false);
+        texto4.setEditable(false);
         calculo.add(texto4);
+        calculo.add(texto3);
+
 
     }
 
